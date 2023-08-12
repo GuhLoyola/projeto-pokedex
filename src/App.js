@@ -5,6 +5,7 @@ import { createGlobalStyle } from "styled-components";
 function App() {
   return (
     <ThemeProvider>
+        <GlobalStyle/>
         <Header/>
     </ThemeProvider>
   );
