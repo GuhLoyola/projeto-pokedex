@@ -1,9 +1,10 @@
+import { Header } from "./components/header/header";
 import { ThemeProvider } from "./contexts/theme-context";
 
 function App() {
   return (
     <ThemeProvider>
-        <p>Vai dar certo 😅👌🏻</p>
+        <Header/>
     </ThemeProvider>
   );
 }
