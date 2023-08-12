@@ -23,6 +23,7 @@ const ThemeButton = styled(Button)`
     border: none;
     border-radius: 50%;
     padding: 10px;
+    height: 50px;
 
     &:active {
         rotate: 180deg;
@@ -32,5 +33,4 @@ const ThemeButton = styled(Button)`
 const Img = styled.img`
 
     height: 30px;
-    width: 30px;
 `
