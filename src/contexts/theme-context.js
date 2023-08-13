@@ -5,13 +5,15 @@ export const themes = {
         background: "#FFFFFF",
         foreground: "#FE4040",
         primaryText: "#262626",
-        secundaryText: "#ACACAC"
+        secundaryText: "#ACACAC",
+        boxShadow: "0 2px 8px #000000"
     },
     dark: {
         background: "#000000",
         foreground: "#363636",
         primaryText: "#EEEEEE",
-        secundaryText: "#A7A6A6"
+        secundaryText: "#121212",
+        boxShadow: "0 2px 8px #FFFFFF"
     }
 }
 
