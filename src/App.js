@@ -1,12 +1,12 @@
-import { Header } from "./components/header/header";
 import { ThemeProvider } from "./contexts/theme-context";
 import { createGlobalStyle } from "styled-components";
+import { AppRoutes } from "./pages/routes";
 
 function App() {
   return (
     <ThemeProvider>
         <GlobalStyle/>
-        <Header/>
+        <AppRoutes/>
     </ThemeProvider>
   );
 }
