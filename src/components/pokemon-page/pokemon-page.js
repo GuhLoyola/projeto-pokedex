@@ -5,6 +5,8 @@ import { getPokemonData } from "../../services/getPokemonData"
 import { Header } from "../header/header"
 import { ReactComponent as Load } from '../../assets/load.svg'
 import { PokemonAbilities } from "../pokemon-abilities/pokemon-abilities"
+import { Details, Div, General, Info } from "./pokemon-page.styled"
+import { Li, Types } from "../pokemon-card/pokemon-card.styled"
 
 const PokemonPage = ({ load, props }) => {
 
@@ -23,26 +25,31 @@ const PokemonPage = ({ load, props }) => {
     return (
         <>
             <Header />
-            <section>
-                <div>
+            <Details theme={theme}>
+                <Div theme={ theme }>
                     {load ? <Load /> :
                         pokemon ?
                             <>
-                                <h2>{pokemon.name}</h2>
-                                <p>id #{pokemon.id}</p>
-                                <img alt={pokemon.name} src={pokemon.sprites?.other["official-artwork"].front_default} />
-                                <div>
-                                    <h3>Types</h3>
-                                    <ul>
-                                        {pokemon.types?.map((element, index) => {
-                                            return (
-                                                <li key={index}>
-                                                    {element.type?.name}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                </div>
+                                <General>
+                                    <Info>
+                                        <h2>{pokemon.name}</h2>
+                                        <p>id #{pokemon.id}</p>
+                                        <div>
+                                            <Types>
+                                                {pokemon.types?.map((element, index) => {
+                                                    return (
+                                                        <li key={index}>
+                                                            {element.type?.name}
+                                                        </li>
+                                                    )
+                                                })}
+                                            </Types>
+                                        </div>
+                                    </Info>
+                                    <img alt={pokemon.name} src={pokemon.sprites?.other["official-artwork"].front_default} />
+
+                                </General>
+
                                 <div>
                                     <h3>Abilities</h3>
                                     <ul>
@@ -58,10 +65,10 @@ const PokemonPage = ({ load, props }) => {
                                 <div>
                                     <h3>Moves</h3>
                                     <ul>
-                                        {pokemon.moves?.slice().map((element, index) => {
+                                        {pokemon.moves?.slice(0).map((element, index) => {
                                             return (
                                                 <li key={index}>
-                                                    {element.move?.move}
+                                                    {element.move?.name}
                                                 </li>
                                             )
                                         })}
@@ -71,10 +78,9 @@ const PokemonPage = ({ load, props }) => {
                             :
                             <p>Sorry...Pokemon not found 😥</p>
                     }
-                </div>
-            </section>
+                </Div>
+            </Details>
         </>
-
     )
 }
 
