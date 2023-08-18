@@ -48,11 +48,11 @@ const Types = styled.ul`
 const Li = styled.li`
     margin: 7px;
     padding: 2px 10px;
+    list-style: none;
     border-radius: 5px;
     background-color: ${props => props.theme.secundaryText};
     color: ${props => props.theme.primaryText};
     transition: 0.3s ease-in-out;
-    
 
 `
 
