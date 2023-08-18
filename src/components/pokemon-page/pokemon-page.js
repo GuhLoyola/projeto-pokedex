@@ -5,7 +5,7 @@ import { getPokemonData } from "../../services/getPokemonData"
 import { Header } from "../header/header"
 import { ReactComponent as Load } from '../../assets/load.svg'
 import { PokemonAbilities } from "../pokemon-abilities/pokemon-abilities"
-import { Details, Div, General, Info } from "./pokemon-page.styled"
+import { Abilities, AbilityList, Details, Div, General, Hr, Info, MoveList, Moves } from "./pokemon-page.styled"
 import { Li, Types } from "../pokemon-card/pokemon-card.styled"
 
 const PokemonPage = ({ load, props }) => {
@@ -31,16 +31,16 @@ const PokemonPage = ({ load, props }) => {
                         pokemon ?
                             <>
                                 <General>
-                                    <Info>
+                                    <Info theme={ theme}>
                                         <h2>{pokemon.name}</h2>
                                         <p>id #{pokemon.id}</p>
                                         <div>
                                             <Types>
                                                 {pokemon.types?.map((element, index) => {
                                                     return (
-                                                        <li key={index}>
+                                                        <Li key={index} theme={ theme }>
                                                             {element.type?.name}
-                                                        </li>
+                                                        </Li>
                                                     )
                                                 })}
                                             </Types>
@@ -49,31 +49,32 @@ const PokemonPage = ({ load, props }) => {
                                     <img alt={pokemon.name} src={pokemon.sprites?.other["official-artwork"].front_default} />
 
                                 </General>
-
-                                <div>
+                                <Hr theme={ theme }/>             
+                                <Abilities theme={ theme }>
                                     <h3>Abilities</h3>
-                                    <ul>
+                                    <AbilityList>
                                         {pokemon.abilities?.slice(0, 5).map((element, index) => {
                                             return (
-                                                <li key={index}>
+                                                <Li key={index} theme={ theme }>
                                                     <PokemonAbilities abilitiesUrl={element.ability?.url} />
-                                                </li>
+                                                </Li>
                                             )
                                         })}
-                                    </ul>
-                                </div>
-                                <div>
+                                    </AbilityList>
+                                </Abilities>
+                                <Hr theme={ theme }/>
+                                <Moves theme={ theme }>
                                     <h3>Moves</h3>
-                                    <ul>
+                                    <MoveList>
                                         {pokemon.moves?.slice(0).map((element, index) => {
                                             return (
-                                                <li key={index}>
+                                                <Li key={index} theme={ theme }>
                                                     {element.move?.name}
-                                                </li>
+                                                </Li>
                                             )
                                         })}
-                                    </ul>
-                                </div>
+                                    </MoveList>
+                                </Moves>
                             </>
                             :
                             <p>Sorry...Pokemon not found 😥</p>
