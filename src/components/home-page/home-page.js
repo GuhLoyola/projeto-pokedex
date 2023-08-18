@@ -5,6 +5,7 @@ import { PokemonCard } from "../pokemon-card/pokemon-card"
 import { ReactComponent as Load } from '../../assets/load.svg'
 import { ThemeContext } from "../../contexts/theme-context"
 import { LoadButton, Section, StyledLink, Ul } from "./home-page.styled"
+import { Search } from "../search-form/search-form"
 
 const Home = ({ load }) => {
 
@@ -24,6 +25,7 @@ const Home = ({ load }) => {
     return (
         <>
             <Header />
+            <Search/>
             <Section theme={theme}>
                 <Ul>
                     {pokemonList.map((pokemon, index) => (
