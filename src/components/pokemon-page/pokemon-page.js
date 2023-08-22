@@ -5,7 +5,7 @@ import { getPokemonData } from "../../services/getPokemonData"
 import { Header } from "../header/header"
 import { ReactComponent as Load } from '../../assets/load.svg'
 import { PokemonAbilities } from "../pokemon-abilities/pokemon-abilities"
-import { Abilities, AbilityList, Details, Div, General, Hr, Info, MoveList, Moves } from "./pokemon-page.styled"
+import { AbilityList, Details, Div, General, Hr, Info, MoveList, Secao } from "./pokemon-page.styled"
 import { Li, Types } from "../pokemon-card/pokemon-card.styled"
 
 const PokemonPage = ({ load, props }) => {
@@ -27,7 +27,7 @@ const PokemonPage = ({ load, props }) => {
             <Header />
             <Details theme={theme}>
                 <Div theme={ theme }>
-                    {load ? <Load /> :
+                    {load ? <Load style={{ fill: theme.color }}/> :
                         pokemon ?
                             <>
                                 <General>
@@ -50,7 +50,7 @@ const PokemonPage = ({ load, props }) => {
 
                                 </General>
                                 <Hr theme={ theme }/>             
-                                <Abilities theme={ theme }>
+                                <Secao theme={ theme }>
                                     <h3>Abilities</h3>
                                     <AbilityList>
                                         {pokemon.abilities?.slice(0, 5).map((element, index) => {
@@ -61,9 +61,9 @@ const PokemonPage = ({ load, props }) => {
                                             )
                                         })}
                                     </AbilityList>
-                                </Abilities>
+                                </Secao>
                                 <Hr theme={ theme }/>
-                                <Moves theme={ theme }>
+                                <Secao theme={ theme }>
                                     <h3>Moves</h3>
                                     <MoveList>
                                         {pokemon.moves?.slice(0).map((element, index) => {
@@ -74,7 +74,7 @@ const PokemonPage = ({ load, props }) => {
                                             )
                                         })}
                                     </MoveList>
-                                </Moves>
+                                </Secao>
                             </>
                             :
                             <p>Sorry...Pokemon not found 😥</p>

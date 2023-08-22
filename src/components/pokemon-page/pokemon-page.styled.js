@@ -32,17 +32,6 @@ const Info = styled.div`
     transition: 0.3s ease-in-out;
 `
 
-const Abilities = styled.div`
-    text-align: center;
-    margin: 20px 0;
-
-    h3 {
-        margin: 10px 0;
-        color: ${props => props.theme.primaryText};
-        transition: 0.3s ease-in-out;
-    }
-`
-
 const AbilityList = styled.ul`
     padding: 10px 20px;
     text-transform: Capitalize;
@@ -54,7 +43,7 @@ const AbilityList = styled.ul`
 
 `
 
-const Moves = styled.div`
+const Secao = styled.div`
     text-align: center;
     margin: 20px 0;
 
@@ -79,4 +68,4 @@ const Hr = styled.hr`
 
 `
 
-export {  General, Div, Info, Details, Abilities, AbilityList, Moves, MoveList, Hr }
+export {  General, Div, Info, Details, Secao,AbilityList, MoveList, Hr }
