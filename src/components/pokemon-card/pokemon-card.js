@@ -14,7 +14,7 @@ const PokemonCard = (props) => {
             const response = await getPokemonData(name)
             setPokemon(response)
         }
-        fetchPokemon(1)
+        fetchPokemon()
     }, [name])
 
 
