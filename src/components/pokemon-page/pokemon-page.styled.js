@@ -68,4 +68,13 @@ const Hr = styled.hr`
 
 `
 
-export {  General, Div, Info, Details, Secao,AbilityList, MoveList, Hr }
+const P = styled.p`
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: ${props => props.theme.primaryText};
+    transition: 0.3s ease-in-out;
+
+`
+
+export {  P, General, Div, Info, Details, Secao,AbilityList, MoveList, Hr }
