@@ -18,7 +18,7 @@ const Search = () => {
     return(
         <Form onSubmit={ handleSubmit } theme={ theme }>
             <div>
-                <Input value={ name } name="name" type="text" onChange={ e => setName(e.target.value)} placeholder="Search Pokemon by name"/>
+                <Input required value={ name } name="name" type="text" onChange={ e => setName(e.target.value)} placeholder="Search Pokemon by name"/>
                 <SearchBtn type="submit" theme={ theme }>Go</SearchBtn>
             </div>
         </Form>
