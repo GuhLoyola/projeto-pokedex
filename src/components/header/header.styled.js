@@ -8,6 +8,9 @@ const HeaderStyle = styled.header`
     background-color: ${props => props.theme.foreground};
     transition: 0.3s ease-in-out;
 
+    @media(max-width: 480px) {
+        padding: 20px 30px;
+    }
 `
 
 const Logo = styled.img`

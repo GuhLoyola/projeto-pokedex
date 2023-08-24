@@ -17,6 +17,14 @@ const General = styled.div`
         height: 250px;
     }
 
+    @media( max-width: 480px) {
+        flex-direction: column;
+
+        img {
+            height: 200px;
+        }
+    }
+
 `
 
 const Div = styled.div`
@@ -44,6 +52,8 @@ const AbilityList = styled.ul`
 `
 
 const Secao = styled.div`
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 20px 0;
 
@@ -59,6 +69,16 @@ const MoveList = styled.ul`
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px 20px;
+
+    @media(max-width: 480px) {
+        padding: 10px;
+
+        li {
+            font-size: 10px;
+            flex-basis: 30%;
+            flex-grow: 1;
+        }
+    }
 
 `
 
