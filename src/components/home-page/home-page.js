@@ -5,6 +5,7 @@ import { PokemonCard } from "../pokemon-card/pokemon-card"
 import { ThemeContext } from "../../contexts/theme-context"
 import { LoadButton, Section, StyledLink, Ul } from "./home-page.styled"
 import { Search } from "../search-form/search-form"
+import { Footer } from "../footer/footer"
 
 const Home = () => {
 
@@ -37,8 +38,7 @@ const Home = () => {
                 </Ul>
                 <LoadButton onClick={ () => setCount(count + 10)} theme={ theme }>Load More</LoadButton> 
             </Section>
-            
-            
+            <Footer/>            
         </>
 
     )
