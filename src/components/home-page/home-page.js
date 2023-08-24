@@ -6,7 +6,7 @@ import { ThemeContext } from "../../contexts/theme-context"
 import { LoadButton, Section, StyledLink, Ul } from "./home-page.styled"
 import { Search } from "../search-form/search-form"
 
-const Home = ({ load }) => {
+const Home = () => {
 
     const { theme } = useContext(ThemeContext)
 
