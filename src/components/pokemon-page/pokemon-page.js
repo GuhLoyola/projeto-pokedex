@@ -3,9 +3,11 @@ import { ThemeContext } from "../../contexts/theme-context"
 import { useParams } from "react-router-dom"
 import { getPokemonData } from "../../services/getPokemonData"
 import { Header } from "../header/header"
+import { Footer } from "../footer/footer"
 import { PokemonAbilities } from "../pokemon-abilities/pokemon-abilities"
 import { AbilityList, Details, Div, General, Hr, Info, MoveList, P, Secao } from "./pokemon-page.styled"
 import { Li, Types } from "../pokemon-card/pokemon-card.styled"
+
 
 const PokemonPage = ({ props }) => {
 
@@ -79,6 +81,8 @@ const PokemonPage = ({ props }) => {
                     }
                 </Div>
             </Details>
+            <Footer/>
+            
         </>
     )
 }
