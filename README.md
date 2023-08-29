@@ -1,70 +1,53 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto Pokedéx
 
-## Available Scripts
+Essa Single Page Application foi construída usando React.js e os Styled Components consumindo a API *PokeApi*. O projeto foi proposto para por em prática os conhecimentos do módulo de React Avançado do curso **DevQuest** do <a href="https://github.com/devemdobro">Dev em Dobro</a>.
 
-In the project directory, you can run:
+## O projeto em si
 
-### `npm start`
+O projeto consite em uma lista de pokemons, popularmente conhecida como pokedéx onde inicialmente os 10 primeiros pokemons são mostrados e ao usuário clicar no botão *Load More*, mais 10 são carregados e assim por diante. Clicando em um pokemon específico o usuário pode ver as informações dele (tipos, abilidades e movimentos). Por fim, também é possivel buscar por um pokemon específico seja por nome ou pelo ID.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Desktop
 
-### `npm test`
+<img src="./docs/ScreenshotDesktop.gif" alt="Gif do App no Desktop" width="500"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Mobile
 
-### `npm run build`
+<img src="./docs/ScreenshotMobile.gif" alt="Gif do app no mobile" width="320"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como rodar o projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone o repositório
+```bash
+git clone https://github.com/GuhLoyola/projeto-pokedex.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instalar as dependências
+```bash
+npm install
+```
 
-### `npm run eject`
+Execute a aplicação
+```bash
+npm start
+```
+## Links
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<ul>
+  <li>Live site URL: <a href="https://projeto-pokedex-pig6heo49-guhloyola.vercel.app/" target="_blank">https://projeto-pokedex-pig6heo49-guhloyola.vercel.app</a></li>
+  <li>Documentação da API: <a href="https://pokeapi.co/" target="_blank">https://pokeapi.co</a></li>
+</ul>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Melhorias futuras
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<ul>
+    <li>Melhorar o sistema de busca e listagem dos pokemons com a API</li>
+    <li>Adicionar um filtro a mais dos pokemons através da tipagem de cada um</li>
+    <li>Adicionar mais detalhes às páginas dos pokemons (Ex: level que são aprendidos os ataques)</li>
+</ul>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Considerações finais
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sem dúvidas este foi um dos projetos mais complexos e interessantes que já fiz, graças a ele pude por em prática diversos conceitos que são muito úteis no dia a dia de um programador front-end tais como criação de componentes, construção e manipulação de rotas com o react-router e dentre outros conceitos.
